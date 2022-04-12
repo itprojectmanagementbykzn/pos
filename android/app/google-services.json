@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "589014242298",
+    "project_id": "pos-system-732dc",
+    "storage_bucket": "pos-system-732dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:589014242298:android:83f7a13e55983bf4998a43",
+        "android_client_info": {
+          "package_name": "com.example.pos_system"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "589014242298-3rpk8akig6ggjn35hfim7o56sivo4acf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pos_system",
+            "certificate_hash": "852de4c064b63bffb1363b9bf20a351389ca71b0"
+          }
+        },
+        {
+          "client_id": "589014242298-7fnsigant0lia076thh71sdias146ss8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBE1rMyr8xSHY-gJsNqEA0MaAYk_HEqb4A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "589014242298-7fnsigant0lia076thh71sdias146ss8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
