@@ -15,6 +15,13 @@ class HomePage extends StatelessWidget {
     const List<Widget> pages = [ProductPage(), AdminPage()];
     return Scaffold(
       appBar: AppBar(
+        title: const Center(
+          child: Text("SHOP MANAGEMENT (POS)",
+          style: TextStyle(color: Colors.black,
+          fontSize: 15,
+          letterSpacing: 1,
+          wordSpacing: 1),),
+        ),
         backgroundColor: Colors.white,
       ),
       body: Obx(() => pages.elementAt(_controller.currentNavIndex.value)),

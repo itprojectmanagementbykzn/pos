@@ -12,6 +12,9 @@ class AdminPage extends StatelessWidget {
     final size = MediaQuery.of(context).size;
     return SingleChildScrollView(
         child: Column(children: [
+          SizedBox(
+            height: 20,
+          ),
       //First Row
       SizedBox(
           height: 100,
@@ -30,13 +33,16 @@ class AdminPage extends StatelessWidget {
                   ),
                   //Sales
                   CardRow(
-                    icon: FontAwesomeIcons.coins,
+                    icon: FontAwesomeIcons.moneyBillTransfer,
                     color: Colors.green,
                     text: "Sales Analysis",
                     navigateRoute: () => Get.toNamed(salesUrl),
                   ),
                 ]),
           )),
+      SizedBox(
+        height: 20,
+      ),
       //Second Row
       SizedBox(
         height: 100,
@@ -51,7 +57,7 @@ class AdminPage extends StatelessWidget {
           ),
           //Management Cupon
           CardRow(
-            icon: FontAwesomeIcons.microchip,
+            icon: FontAwesomeIcons.gift,
             color: Colors.blue,
             text: "Coupon Management",
             navigateRoute: () => Get.toNamed(couponUrl),
