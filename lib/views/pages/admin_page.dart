@@ -17,7 +17,7 @@ class AdminPage extends StatelessWidget {
           ),
       //First Row
       SizedBox(
-          height: 100,
+          height: 120,
           width: size.width,
           child: Padding(
             padding: const EdgeInsets.all(8.0),
@@ -45,7 +45,7 @@ class AdminPage extends StatelessWidget {
       ),
       //Second Row
       SizedBox(
-        height: 100,
+        height: 120,
         width: size.width,
         child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
           //Inventory Management
@@ -63,7 +63,49 @@ class AdminPage extends StatelessWidget {
             navigateRoute: () => Get.toNamed(couponUrl),
           ),
         ]),
-      )
+      ),
+      SizedBox(height: 20,),
+      SizedBox(
+            height: 120,
+            width: size.width,
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              //Inventory Management
+              CardRow(
+                icon: FontAwesomeIcons.sackDollar,
+                color: Colors.purple,
+                text: "Reward Management",
+                navigateRoute: () => Get.toNamed(inventoryUrl),
+              ),
+              //Management Cupon
+              CardRow(
+                icon: FontAwesomeIcons.receipt,
+                color: Colors.blue,
+                text: "Order Management",
+                navigateRoute: () => Get.toNamed(couponUrl),
+              ),
+            ]),
+          ),
+      SizedBox(height: 20,),
+      SizedBox(
+            height: 120,
+            width: size.width,
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceAround, children: [
+              //Inventory Management
+              CardRow(
+                icon: FontAwesomeIcons.barcode,
+                color: Colors.purple,
+                text: "Barcode Management",
+                navigateRoute: () => Get.toNamed(inventoryUrl),
+              ),
+              //Management Cupon
+              CardRow(
+                icon: FontAwesomeIcons.dollarSign,
+                color: Colors.blue,
+                text: "Expense",
+                navigateRoute: () => Get.toNamed(couponUrl),
+              ),
+            ]),
+          ),
     ]));
   }
 }
