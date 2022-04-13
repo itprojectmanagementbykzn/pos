@@ -11,7 +11,8 @@ class CouponFormWidget extends StatelessWidget {
     SalesController _saleController = Get.find();
     final size = MediaQuery.of(context).size;
     return SizedBox(
-      height: size.height * 0.3,
+      height: size.height * 0.25,
+      width: size.width,
       child: Column(
         children: [
           TextFormField(
@@ -22,23 +23,27 @@ class CouponFormWidget extends StatelessWidget {
           TextFormField(
             controller: _saleController.couponCodeController,
             maxLines: 1,
-            decoration: const InputDecoration(hintText: "Code"),
+            decoration: const InputDecoration(hintText: "Discount Code"),
           ),
           TextFormField(
             controller: _saleController.percentageController,
             maxLines: 1,
             keyboardType: TextInputType.number,
-            decoration: const InputDecoration(hintText: "Discount percentage"),
+            decoration: const InputDecoration(hintText: "Discount %"),
+          ),
+          SizedBox(
+            height: 30,
           ),
           //StartDate and EndDate
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               //StartDate
               Container(
                 decoration: const BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey,
+                      color: Colors.white,
                     ),
                     BoxShadow(
                       color: Colors.white,
@@ -67,7 +72,7 @@ class CouponFormWidget extends StatelessWidget {
                     decoration: const BoxDecoration(
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.grey,
+                          color: Colors.white,
                         ),
                         BoxShadow(
                           color: Colors.white,

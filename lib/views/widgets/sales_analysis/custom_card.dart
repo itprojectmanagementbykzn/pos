@@ -14,13 +14,13 @@ class CustomCardForSales extends StatelessWidget {
     return Card(
       shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
-        Radius.circular(20),
+        Radius.circular(10),
       )),
       elevation: 5,
       color: color,
       margin: const EdgeInsets.all(8),
       child: Padding(
-        padding: const EdgeInsets.all(15.0),
+        padding: const EdgeInsets.all(5),
         child: Column(
           children: [
             Align(
@@ -29,7 +29,9 @@ class CustomCardForSales extends StatelessWidget {
                 headTitleText,
                 style: const TextStyle(
                   color: Colors.white,
-                  fontSize: 24,
+                  fontSize: 16,
+                  wordSpacing: 1,
+                  letterSpacing: 1,
                 ),
               ),
             ),
@@ -37,7 +39,7 @@ class CustomCardForSales extends StatelessWidget {
               total,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 18,
+                fontSize: 16,
               ),
             )
           ],

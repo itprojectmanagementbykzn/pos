@@ -12,10 +12,10 @@ class WeeklyBarChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SfCartesianChart(
       title: ChartTitle(
-          text: "Weekly sales chart with profit,revenue and cost",
+          text: "ယခု လ ၏  ဝင်ငွေ ၊ အမြတ် နှင့် ရင်းနှီးထားသော ငွေများ",
           textStyle: const TextStyle(
             color: Color.fromARGB(255, 15, 70, 17),
-            fontSize: 15,
+            fontSize: 12,
             fontWeight: FontWeight.bold,
           )),
       primaryXAxis: CategoryAxis(),

@@ -20,22 +20,22 @@ class MonthlyRevenue extends StatelessWidget {
               Row(
                 children: [
                   CustomCardForSales(
-                    headTitleText: _controller
-                        .getMonthName(_controller.getCurrentMonthDateTime()),
+                    headTitleText: "${_controller
+                        .getMonthName(_controller.getCurrentMonthDateTime())} အမြတ်",
                     color: Colors.red,
-                    total: "${_controller.monthlyProfit()}ks",
+                    total: "${_controller.monthlyProfit()} ကျပ်",
                   ),
                   CustomCardForSales(
-                    headTitleText: _controller
-                        .getMonthName(_controller.getCurrentMonthDateTime()),
+                    headTitleText: "${_controller
+                        .getMonthName(_controller.getCurrentMonthDateTime())} ဝင်ငွေ",
                     color: Colors.green,
-                    total: "${_controller.monthlyRevenue()}ks",
+                    total: "${_controller.monthlyRevenue()} ကျပ်",
                   ),
                   CustomCardForSales(
-                    headTitleText: _controller
-                        .getMonthName(_controller.getCurrentMonthDateTime()),
+                    headTitleText: "${_controller
+                        .getMonthName(_controller.getCurrentMonthDateTime())} ရင်းနှီးငွေ",
                     color: Colors.blue,
-                    total: "${_controller.monthlyOriginalRevenue()}ks",
+                    total: "${_controller.monthlyOriginalRevenue()} ကျပ်",
                   ),
                 ],
               ),
@@ -44,15 +44,19 @@ class MonthlyRevenue extends StatelessWidget {
               const WeeklyBarChart(),
 
               //Note For Monthly LineChart
-              Row(
-                children: [
-                  noteForDailyAnimateBarChart(
-                      color: Colors.red, text: "Profit"),
-                  noteForDailyAnimateBarChart(
-                      color: Colors.green, text: "Total Revenue"),
-                  noteForDailyAnimateBarChart(
-                      color: Colors.blue, text: "Total Cost"),
-                ],
+              Padding(
+                padding: const EdgeInsets.only(left: 30, right: 30),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    noteForDailyAnimateBarChart(
+                        color: Colors.red, text: "အမြတ်"),
+                    noteForDailyAnimateBarChart(
+                        color: Colors.green, text: "ဝင်ငွေ"),
+                    noteForDailyAnimateBarChart(
+                        color: Colors.blue, text: "ရင်းနှီးငွေ"),
+                  ],
+                ),
               ),
             ],
           )

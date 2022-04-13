@@ -33,29 +33,32 @@ class _SalesAnalysisState extends State<SalesAnalysis> {
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: appColor,
-          title: const Text("Sales Analysis"),
-          leading: const Icon(
-            FontAwesomeIcons.coins,
-            color: Colors.white,
-            size: 30,
+          iconTheme: const IconThemeData(color: Colors.indigo),
+          backgroundColor: Colors.white,
+          title: const Text("Sales Analysis",
+          style: TextStyle(color: Colors.black,
+          letterSpacing: 1,
+          wordSpacing: 1,
+          fontSize: 16),
           ),
+          leading: const BackButton(color: Colors.black),
           centerTitle: true,
           bottom: const TabBar(
             labelColor: Colors.black,
             unselectedLabelColor: Colors.black26,
-            labelPadding: EdgeInsets.all(8),
-            indicatorColor: Colors.blue,
+            labelPadding: EdgeInsets.only(left: 10, right: 10, bottom: 15),
+            indicatorColor: Colors.indigo,
             indicatorWeight: 5,
             tabs: [
               Text(
-                "Daily",
+                "နေ့စဉ်",
               ),
               Text(
-                "Monthly",
+                "လချူပ်",
               ),
-              Text("Yearly"),
+              Text("နှစ်ချူပ်"),
             ],
           ),
         ),

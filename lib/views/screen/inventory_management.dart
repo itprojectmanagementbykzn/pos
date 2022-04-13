@@ -28,23 +28,25 @@ class _InventoryManagementState extends State<InventoryManagement> {
     InventoryController _inController = Get.find();
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      backgroundColor: Colors.white,
         appBar: AppBar(
-          backgroundColor: appColor,
-          title: const Text("Sales Analysis"),
-          leading: const Icon(
-            FontAwesomeIcons.boxes,
-            color: Colors.white,
-            size: 30,
-          ),
+          elevation: 0,
+          backgroundColor: Colors.white,
+          iconTheme: const IconThemeData(color: Colors.indigo),
+          title: const Text("Stock Management",
+          style: TextStyle(color: Colors.black, fontSize: 16,
+          wordSpacing: 2, letterSpacing: 1),),
+          leading: const BackButton(color: Colors.black),
           centerTitle: true,
           actions: [
             IconButton(
+
                 onPressed: () {
                   _inController.pressAddProduct();
                   Get.defaultDialog(
                     confirm: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
+                        primary: Colors.white,
                       ),
                       onPressed: () => _inController.addProduct(),
                       child: const Text("Upload",
@@ -58,7 +60,7 @@ class _InventoryManagementState extends State<InventoryManagement> {
                 },
                 icon: const Icon(
                   Icons.add,
-                  color: Colors.white,
+                  color: Colors.black,
                 ))
           ],
         ),
@@ -72,16 +74,20 @@ class _InventoryManagementState extends State<InventoryManagement> {
                 ),
                 const InventoryPieChart(),
                 const SizedBox(
-                  height: 25,
+                  height: 20,
                 ),
                 const Padding(
-                  padding: EdgeInsets.only(left: 20, bottom: 5),
-                  child: Text(
-                    "Stock Table",
-                    style: TextStyle(
-                      color: Color.fromARGB(255, 15, 70, 17),
-                      fontSize: 20,
-                      fontWeight: FontWeight.bold,
+                  padding: EdgeInsets.only(bottom: 10),
+                  child: Center(
+                    child: Text(
+                      "Stock Table",
+                      style: TextStyle(
+                        color: Color.fromARGB(255, 15, 70, 17),
+                        fontSize: 18,
+                        wordSpacing: 1,
+                        letterSpacing: 1,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ),

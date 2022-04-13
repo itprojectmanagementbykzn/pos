@@ -21,19 +21,19 @@ class DailyRevenue extends StatelessWidget {
                 Row(
                   children: [
                     CustomCardForSales(
-                      headTitleText: "Today",
+                      headTitleText: "ယနေ့ အမြတ်",
                       color: Colors.red,
-                      total: _controller.todayProfit(),
+                      total: "${_controller.todayProfit()} ကျပ်",
                     ),
                     CustomCardForSales(
-                      headTitleText: "Today",
+                      headTitleText: "ယနေ့ဝင်ငွေ",
                       color: Colors.green,
-                      total: "${_controller.todayRevenue()}",
+                      total: "${_controller.todayRevenue()} ကျပ်",
                     ),
                     CustomCardForSales(
-                      headTitleText: "Today",
+                      headTitleText: "ယနေ့ ရင်းနှီးငွေ",
                       color: Colors.blue,
-                      total: "${_controller.todayOriginalRevenue()}",
+                      total: "${_controller.todayOriginalRevenue()} ကျပ်",
                     ),
                   ],
                 ),
@@ -46,15 +46,19 @@ class DailyRevenue extends StatelessWidget {
                             child: BarChartSample1()))),
 
                 //Note For AnimateBarChart
-                Row(
-                  children: [
-                    noteForDailyAnimateBarChart(
-                        color: Colors.red, text: "Profit"),
-                    noteForDailyAnimateBarChart(
-                        color: Colors.green, text: "Total Revenue"),
-                    noteForDailyAnimateBarChart(
-                        color: Colors.blue, text: "Total Cost"),
-                  ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 30, right: 30),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      noteForDailyAnimateBarChart(
+                          color: Colors.red, text: "အမြတ်"),
+                      noteForDailyAnimateBarChart(
+                          color: Colors.green, text: "ဝင်ငွေ"),
+                      noteForDailyAnimateBarChart(
+                          color: Colors.blue, text: "ရင်းနှီးငွေ"),
+                    ],
+                  ),
                 ),
               ],
             ),

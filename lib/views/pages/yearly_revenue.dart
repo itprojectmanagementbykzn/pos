@@ -17,19 +17,19 @@ class YearlyRevenue extends StatelessWidget {
         Row(
           children: [
             CustomCardForSales(
-              headTitleText: "${DateTime.now().year}",
+              headTitleText: "${DateTime.now().year} အမြတ်",
               color: Colors.red,
-              total: "${_controller.getCurrentYearProfit()}ks",
+              total: "${_controller.getCurrentYearProfit()} ကျပ်",
             ),
             CustomCardForSales(
-              headTitleText: "${DateTime.now().year}",
+              headTitleText: "${DateTime.now().year} ဝင်ငွေ",
               color: Colors.green,
-              total: "${_controller.getCurrentYearRevenue()}ks",
+              total: "${_controller.getCurrentYearRevenue()} ကျပ်",
             ),
             CustomCardForSales(
-              headTitleText: "${DateTime.now().year}",
+              headTitleText: "${DateTime.now().year} ရင်းနှီးငွေ",
               color: Colors.blue,
-              total: "${_controller.getCurrentYearCost()}ks",
+              total: "${_controller.getCurrentYearCost()} ကျပ်",
             ),
           ],
         ),
@@ -37,13 +37,17 @@ class YearlyRevenue extends StatelessWidget {
         //
         const StackedAreaCustomColorLineChart(),
         //Note For Yearly LineChart
-        Row(
-          children: [
-            noteForDailyAnimateBarChart(color: Colors.red, text: "Profit"),
-            noteForDailyAnimateBarChart(
-                color: Colors.green, text: "Total Revenue"),
-            noteForDailyAnimateBarChart(color: Colors.blue, text: "Total Cost"),
-          ],
+        Padding(
+          padding: const EdgeInsets.only(left: 30, right: 30),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              noteForDailyAnimateBarChart(color: Colors.red, text: "အမြတ်"),
+              noteForDailyAnimateBarChart(
+                  color: Colors.green, text: "ဝင်ငွေ"),
+              noteForDailyAnimateBarChart(color: Colors.blue, text: "ရင်းနှီးငွေ"),
+            ],
+          ),
         ),
       ],
     );

@@ -146,11 +146,11 @@ class SalesController extends GetxController {
   }
 
   String todayRevenue() {
-    var result = "0ks";
+    var result = "0 ကျပ်";
     try {
       var map = dailySplayTreeMapList.value!
           .firstWhere((element) => element.key == DateTime.now().day);
-      result = "${map.value.value.totalRevenue}ks";
+      result = "${map.value.value.totalRevenue}";
     } catch (e) {
       result = result;
       debugPrint("********No order in today!.*********");
@@ -159,11 +159,11 @@ class SalesController extends GetxController {
   }
 
   String todayOriginalRevenue() {
-    var result = "0ks";
+    var result = "0 ကျပ်";
     try {
       var map = dailySplayTreeMapList.value!
           .firstWhere((element) => element.key == DateTime.now().day);
-      result = "${map.value.value.originalTotalRevenue}ks";
+      result = "${map.value.value.originalTotalRevenue}";
     } catch (e) {
       result = result;
       debugPrint("********No order in today!.*********");
@@ -172,13 +172,13 @@ class SalesController extends GetxController {
   }
 
   String todayProfit() {
-    var result = "0ks";
+    var result = "0 ကျပ်";
     try {
       var map = dailySplayTreeMapList.value!
           .firstWhere((element) => element.key == DateTime.now().day);
       var total = (map.value.value.totalRevenue) -
           (map.value.value.originalTotalRevenue);
-      result = "$total ks";
+      result = "$total";
     } catch (e) {
       result = result;
       debugPrint("********No order in today!.*********");

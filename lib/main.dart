@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
     Get.put(LoginController());
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Cindy POS',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),

@@ -1,3 +1,4 @@
+import 'package:colours/colours.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pos_system/controller/all_controller.dart';
@@ -14,24 +15,24 @@ class HomePage extends StatelessWidget {
     const List<Widget> pages = [ProductPage(), AdminPage()];
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: appColor,
+        backgroundColor: Colors.white,
       ),
       body: Obx(() => pages.elementAt(_controller.currentNavIndex.value)),
       bottomNavigationBar: Obx(() {
         return BottomNavigationBar(
-          selectedItemColor: Colors.green,
+          selectedItemColor: Colours.red,
           currentIndex: _controller.currentNavIndex.value,
           onTap: _controller.changeCurrentNavIndex,
           items: const <BottomNavigationBarItem>[
             //Product Page
             BottomNavigationBarItem(
-              icon: Icon(Icons.shop_rounded),
-              label: "Product",
+              icon: Icon(Icons.store_mall_directory),
+              label: "POS",
             ),
             //Admin Page
             BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              label: "Profile",
+              icon: Icon(Icons.settings),
+              label: "Management",
             ),
           ],
         );

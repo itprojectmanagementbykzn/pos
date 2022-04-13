@@ -21,7 +21,7 @@ class ProductFormWidget extends StatelessWidget {
           TextFormField(
             controller: _inController.originalPriceController,
             maxLines: 1,
-            decoration: const InputDecoration(hintText: "Original Price"),
+            decoration: const InputDecoration(hintText: "Cost of Product"),
           ),
           TextFormField(
             controller: _inController.priceController,

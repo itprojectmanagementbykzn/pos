@@ -17,10 +17,10 @@ class StackedAreaCustomColorLineChart extends StatelessWidget {
   Widget build(BuildContext context) {
     return SfCartesianChart(
         title: ChartTitle(
-            text: "Current year sales chart",
+            text: "ယခု နှစ် ၏ ဝင်ငွေ ၊ အမြတ် နှင့် ရင်းနှီးငွေ ဇယား",
             textStyle: const TextStyle(
               color: Color.fromARGB(255, 15, 70, 17),
-              fontSize: 15,
+              fontSize: 14,
               fontWeight: FontWeight.bold,
             )),
         primaryXAxis: CategoryAxis(),

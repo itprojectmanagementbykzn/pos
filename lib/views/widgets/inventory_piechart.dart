@@ -54,7 +54,7 @@ class InventoryPieChart extends StatelessWidget {
                 isSquare: true,
               ),
               SizedBox(
-                height: 4,
+                height: 10,
               ),
               Indicator(
                 color: Color(0xff13d38e),

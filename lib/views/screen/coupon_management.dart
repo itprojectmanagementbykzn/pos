@@ -1,3 +1,4 @@
+import 'package:colours/colours.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
@@ -29,25 +30,29 @@ class _CouponManagementState extends State<CouponManagement> {
     SalesController _saleController = Get.find();
     AllController _controller = Get.find();
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: appColor,
-        title: const Text("Coupon Management"),
-        leading: const Icon(
-          FontAwesomeIcons.microchip,
-          color: Colors.white,
-          size: 30,
+        backgroundColor: Colors.white,
+        title: const Text("Coupon Management",
+        style: TextStyle(color: Colors.black,
+        wordSpacing: 1, letterSpacing: 1,
+        fontSize: 16),
         ),
+        leading: const BackButton(color: Colors.black),
         centerTitle: true,
       ),
       body: Column(
         children: [
-          //Text and Add Row
+          SizedBox(height: 10),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               const Text("Coupon Table",
                   style: TextStyle(
                     color: Color.fromARGB(255, 15, 70, 17),
-                    fontSize: 15,
+                    fontSize: 16,
+                    wordSpacing: 1,
+                    letterSpacing: 1,
                     fontWeight: FontWeight.bold,
                   )),
               //Space
@@ -58,7 +63,7 @@ class _CouponManagementState extends State<CouponManagement> {
                   Get.defaultDialog(
                     confirm: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        primary: Colors.green,
+                        primary: Colours.gold,
                       ),
                       onPressed: () => _saleController.addCoupon(),
                       child: const Text("Upload",
@@ -78,6 +83,7 @@ class _CouponManagementState extends State<CouponManagement> {
               ),
             ],
           ),
+          SizedBox(height: 10),
           //Coupon Table
           SizedBox(
               height: size.height * 0.7,
