@@ -48,15 +48,23 @@ class BarChartSample1State extends State<BarChartSample1> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 mainAxisSize: MainAxisSize.max,
                 children: <Widget>[
+
+                  const SizedBox(
+                    height: 4,
+                  ),
+                  const Text(
+                    'ယနေ့ ၏  ဝင်ငွေ ၊ အမြတ် နှင့် ရင်းနှီးထားသော ငွေများ',
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 15,
+                        fontWeight: FontWeight.bold),
+                  ),
+
+                  const SizedBox(
+                    height: 10,
+                  ),
+
                   Row(children: [
-                    //Chart Title
-                    const Text(
-                      'Daily Sales Chart',
-                      style: TextStyle(
-                          color: Color(0xff0f4a3c),
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold),
-                    ),
                     const SizedBox(width: 15),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
@@ -72,19 +80,7 @@ class BarChartSample1State extends State<BarChartSample1> {
                     ),
                     //Next Button
                   ]),
-                  const SizedBox(
-                    height: 4,
-                  ),
-                  const Text(
-                    'Daily original profit,revenue and cost',
-                    style: TextStyle(
-                        color: Color(0xff379982),
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold),
-                  ),
-                  const SizedBox(
-                    height: 38,
-                  ),
+
                   Expanded(
                     child: Obx(() {
                       return BarChart(
